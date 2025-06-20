@@ -107,7 +107,10 @@
         async loadDogPics() {
           try {
             const res = await fetch('/api/dogs');
-            
+            if (!res.ok) {
+              console.error('Failed to get dogs');
+            }
+            const data = res.json();
           }
         }
       }
