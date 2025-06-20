@@ -22,6 +22,19 @@
             <button type="button" @click="newDog">Press for another dog of the day.</button>
         </div>
 
-        
+        <script>
+                const { createApp } = Vue;
+
+    const app = createApp({
+        data() {
+            return {
+                dogName:'A Dog',
+                dogImage: ''
+            };
+        },
+        mounted()
+    })
+})
+        </script>
     </body>
 </html>
