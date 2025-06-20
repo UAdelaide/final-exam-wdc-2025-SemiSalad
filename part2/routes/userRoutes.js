@@ -70,7 +70,7 @@ router.post('/logout', (req, res) => {
 
 
 // GET dogs
-router.get('/ownedDogs', (req, res) => {
+router.get('/ownedDogs', async (req, res) => {
   const ownerId = req.session.user.user_id;
 
   try {
@@ -79,6 +79,7 @@ router.get('/ownedDogs', (req, res) => {
       `, [ownerId]);
     res.json(dogs);
   } catch (err) {
+    console.error(err);
     
   }
 });
