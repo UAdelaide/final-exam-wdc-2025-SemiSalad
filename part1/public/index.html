@@ -20,6 +20,7 @@
                 Nulla sed lectus et libero malesuada lacinia quis vitae nisi. Phasellus non purus eget tortor posuere auctor
                 faucibus at est.</p>
             <button type="button" @click="newDog">Press for another dog of the day.</button>
+            <p></p>
         </div>
 
         <script>
@@ -38,7 +39,7 @@
                             const data = await res.json();
                             this.dogImage = data.message;
                         } catch (err) {
-                            this.error
+                            this.error = 'Could not load dog image'
                         }
                     }
                 }
