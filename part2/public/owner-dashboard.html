@@ -101,7 +101,7 @@
 
         async function submitWalkRequest() {
           try {
-            form.
+            form.value.dog_id = selectedDogId.value; // sets dog id
 
             const res = await fetch('/api/walks', {
               method: 'POST',
