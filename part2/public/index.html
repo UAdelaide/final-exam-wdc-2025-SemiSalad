@@ -59,11 +59,11 @@
               const message = data.msg || 'Login failed';
               alert(message);
             }
-            if (data.user.role === 'owner') { // if the 
+            if (data.user.role === 'owner') { // if the user has an 'owner' role
               this.email = '';
               this.password = '';
               window.location.href = '/owner-dashboard.html';
-            } else if (data.user.role === 'walker') {
+            } else if (data.user.role === 'walker') { // if the user has a 'walker' role
               this.email = '';
               this.password = '';
               window.location.href = '/walker-dashboard.html';
