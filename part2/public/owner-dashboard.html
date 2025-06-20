@@ -137,8 +137,10 @@
             if (res.ok) {
               window.location.href = '/index.html';
             } else {
-              alert('Logout failed')
+              alert('Logout failed');
             }
+          } catch (err) {
+            console.error(err)
           }
         }
       }
