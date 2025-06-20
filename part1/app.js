@@ -87,9 +87,9 @@ app.get('/api/walkers/summary', async (req, res) => {
       GROUP BY u.user_id
       `);
   } catch (err) {
-    res.status(500).json({ error: 'Failed to display '})
+    res.status(500).json({ error: 'Failed to display walker summaries' });
   }
-})
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
