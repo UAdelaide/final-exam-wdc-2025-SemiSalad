@@ -86,7 +86,7 @@ router.get('/ownedDogs', async (req, res) => {
 
 
 // api/dogs route from part 1
-app.get('/api/dogs', async (req, res) => {
+router.get('/dogs', async (req, res) => {
   try {
     const [dogs] = await db.execute(`
       SELECT d.dog_id, d.name AS dog_name, d.size, u.username AS owner_username
