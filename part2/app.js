@@ -14,12 +14,14 @@ app.use(session({ // basic session info
     saveUninitialized: true,
     cookie: {
         secure: false
+        httpOnly: triggerAsyncId
     }
 }));
 
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
+const { triggerAsyncId } = require('async_hooks');
 
 app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
