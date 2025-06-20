@@ -55,7 +55,7 @@
 
             const data = await res.json();
             if (!res.ok) {
-              const message = data.msg || 'Login failed'
+              const message = data.msg || 'Login failed';
               alert(message);
             }
             if (data.user.role === 'owner') {
@@ -63,7 +63,7 @@
             } else if (data.user.role === 'walker') {
               window.location.href = '/walker-dashboard.html';
             } else {
-              
+              const message = data.msg || 'Unknown role';
             }
           }
         }
