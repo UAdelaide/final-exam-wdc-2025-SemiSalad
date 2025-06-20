@@ -24,7 +24,13 @@ app.use('/users', usersRouter);
 
 
 
+let db;
 
+(async () => {
+  try {
+    db = 
+  }
+})
 
 
 
