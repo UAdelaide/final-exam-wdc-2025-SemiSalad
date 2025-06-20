@@ -178,5 +178,7 @@ table.dogTable {
 }
 
 table.dogTable th, table.dogTable td {
-    
+    padding: 1em;
 }
+
+table.dogTable tbody tr:nth-child
