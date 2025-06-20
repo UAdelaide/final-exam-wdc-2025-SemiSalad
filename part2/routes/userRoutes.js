@@ -71,7 +71,11 @@ router.post('/logout', (req, res) => {
 
 // GET dogs
 router.get('/ownedDogs', (req, res) => {
-  const owner_id = 
+  const ownerId = req.session.user.user_id;
+
+  try {
+    
+  }
 })
 
 module.exports = router;
