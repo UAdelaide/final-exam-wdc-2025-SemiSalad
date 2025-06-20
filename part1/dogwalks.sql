@@ -65,4 +65,4 @@ INSERT INTO Users (username, email, password_hash, role) VALUES
 ('notadog', 'notadog@definitelynotadog.com', 'woof', 'walker');
 
 INSERT INTO Dogs (owner_id, name, size) VALUES
-
+((SELECT ))
