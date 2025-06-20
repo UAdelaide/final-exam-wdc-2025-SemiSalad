@@ -13,8 +13,9 @@ app.use(session({ // basic session info
     resave: false,
     saveUninitialized: true,
     cookie: {
-        secure: false
-        httpOnly: triggerAsyncId
+        secure: false,
+        httpOnly: true,
+        maxAge = null
     }
 }));
 
