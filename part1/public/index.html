@@ -34,7 +34,8 @@
                 methods: {
                     async newDog() {
                         try {
-                            const res = await fetch('https://dog.ceo/dog-api/documentation/random')
+                            const res = await fetch('https://dog.ceo/dog-api/documentation/random');
+                            const data = await res.json();
                         }
                     }
                 }
