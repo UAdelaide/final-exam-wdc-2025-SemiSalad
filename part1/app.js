@@ -35,8 +35,10 @@ let db;
       database: 'DogWalkService'
     });
     console.log('Connected to DogWalkService database.');
-  } catch (err)
-})
+  } catch (err) {
+    console.error('Error connecting to DogWalkService database.', err);
+  }
+})();
 
 
 
