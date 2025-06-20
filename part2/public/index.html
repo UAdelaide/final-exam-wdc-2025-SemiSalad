@@ -110,7 +110,7 @@
             if (!res.ok) {
               console.error('Failed to get dogs');
             }
-            const data = res.json();
+            const data = await res.json();
 
             const dogPhotos = [];
             for (const dog of data) {
