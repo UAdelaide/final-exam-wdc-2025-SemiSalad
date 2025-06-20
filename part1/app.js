@@ -55,6 +55,9 @@ app.get('/api/dogs', async (req, res) => {
 });
 
 
+app.get('/api/')
+
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
