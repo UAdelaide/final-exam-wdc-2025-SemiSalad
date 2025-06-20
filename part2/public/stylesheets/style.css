@@ -180,7 +180,7 @@ table.dogTable {
 table.dogTable th, table.dogTable td {
     padding: 1em;
     border-top: 1px solid #ccc;
-    bor
+    border-bottom: 1px solid #ccc;
 }
 
 table.dogTable tbody tr:nth-child(odd) {
