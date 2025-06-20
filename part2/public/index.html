@@ -120,9 +120,11 @@
                 dogPhotos.push({ dog, photoUrl: photoData.message });
 
               } catch {
-                dogPhotos
+                dogPhotos.push({ dog, photoUrl: '' });
               }
             }
+          } catch {
+            
           }
         }
       }
