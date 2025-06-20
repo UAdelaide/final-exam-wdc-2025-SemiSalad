@@ -23,3 +23,6 @@ a {
   font-size: 6px;
 }
 
+#dogImage {
+  align-items: right;
+}
