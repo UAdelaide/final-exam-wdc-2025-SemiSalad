@@ -56,6 +56,9 @@
             const data = await res.json();
             if (!res.ok) {
               const message = data.msg || 'Login failed'
+              alert(message);
+            } else {
+              
             }
           }
         }
