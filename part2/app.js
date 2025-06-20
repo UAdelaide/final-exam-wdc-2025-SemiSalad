@@ -15,7 +15,7 @@ app.use(session({ // basic session info
     cookie: {
         secure: false,
         httpOnly: true,
-        maxAge = null
+        maxAge: null
     }
 }));
 
