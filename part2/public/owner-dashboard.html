@@ -156,12 +156,13 @@
               alert('Error retrieving dogs');
             }
           } catch (err) {
-            alert('Couldn&'')
+            alert('Could not load dogs');
           }
         }
 
         onMounted(() => {
           loadWalks();
+          getDogs();
         });
 
         return {
