@@ -98,8 +98,9 @@
           try {
             const res = await fetch('/api/users/me');
             if (!res.ok) {
-              
+              console.error('Not logged in');
             }
+            const user = await 
           }
         }
 
