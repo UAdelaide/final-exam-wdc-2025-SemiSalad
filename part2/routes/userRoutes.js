@@ -70,6 +70,6 @@ router.post('/logout', (req, res) => {
 
 
 // GET dogs
-router.get('/ownedDogs')
+router.get('/ownedDogs', (req, res))
 
 module.exports = router;
