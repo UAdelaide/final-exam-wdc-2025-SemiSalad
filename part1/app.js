@@ -41,7 +41,11 @@ let db;
 })();
 
 
-app.get('/api/dogs')
+app.get('/api/dogs', async (req, res) => {
+  try {
+    const [rows] = await db.execute()
+  }
+})
 
 
 // catch 404 and forward to error handler
