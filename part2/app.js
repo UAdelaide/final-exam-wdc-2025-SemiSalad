@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-const session = require('express-session');
+const session = require('express-session'); // required session
 require('dotenv').config();
 
 const app = express();
@@ -8,7 +8,7 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));
-app.use(session({
+app.use(session({ // basic session info
     secret: 'your-secret-key',
     resave: false,
     saveUninitialized: true
