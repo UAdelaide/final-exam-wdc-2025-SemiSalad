@@ -34,8 +34,8 @@ let db;
       password: '',
       database: 'DogWalkService'
     });
-    console.log('Connected to Dog')
-  }
+    console.log('Connected to DogWalkService database.');
+  } catch (err)
 })
 
 
