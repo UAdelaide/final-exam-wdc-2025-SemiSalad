@@ -58,7 +58,9 @@ app.get('/api/dogs', async (req, res) => {
 app.get('/api/walkrequests/open', async (req, res) => {
   try {
     const [rows] = await db.execute(`
-      SELECT wr.request_id, d.name AS dog_name, wr.requested_time, wr.duration_minutes, wr.location, u.username AS owner_username
+      SELECT wr.request_id, d.name AS dog_name, wr.requested_time,
+              wr.duration_minutes, wr.location, u.username AS owner_username
+      FROM 
       `)
   }
 })
