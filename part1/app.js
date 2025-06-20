@@ -74,7 +74,7 @@ app.get('/api/walkrequests/open', async (req, res) => {
 // api/walkers/summary route
 app.get('/api/walkers/summary', async (req, res) => {
   try {
-    const []
+    const [ratings] =
   }
 })
 
