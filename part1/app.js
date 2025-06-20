@@ -55,7 +55,7 @@ app.get('/api/dogs', async (req, res) => {
   }
 });
 
-
+// api/walkrequests/open route
 app.get('/api/walkrequests/open', async (req, res) => {
   try {
     const [requests] = await db.execute(`
