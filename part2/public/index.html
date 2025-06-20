@@ -113,17 +113,19 @@
             }
             const data = await res.json();
 
-            const dogPhotos = [];
-            for (const dog of data) {
-              try {
-                const photoRes = await fetch('https://dog.ceo/api/breeds/image/random');
-                const photoData = await photoRes.json();
-                dogPhotos.push({ dog, photoUrl: photoData.message });
-              } catch {
+            const dogPhotos = await Promise.all(
+              data.map(async (dog) => {
+                let photoUrl = '';
+                try {
+                  const photoRes = await fetch('https://dog.ceo/api/breeds/image/random');
+                  const photoData = await photoRes.json();
+                  photoUrl = photoData.message;
+                } catch {
                 dogPhotos.push({ dog, photoUrl: '' });
               }
             }
             this.dogs = dogPhotos;
+            
           } catch (err) {
             console.error('An error has occurred loading photos');
             alert('Dog photos could not load');
