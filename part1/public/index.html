@@ -32,7 +32,11 @@
                     };
                 },
                 methods: {
-                    async
+                    async newDog() {
+                        try {
+                            const res = await fetch('https://dog.ceo/dog-api/documentation/random')
+                        }
+                    }
                 }
             })
         </script>
