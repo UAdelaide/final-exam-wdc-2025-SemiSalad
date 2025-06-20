@@ -7,6 +7,7 @@ var mysql = require('mysql2/promise');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+const { devNull } = require('os');
 
 var app = express();
 
@@ -74,7 +75,9 @@ app.get('/api/walkrequests/open', async (req, res) => {
 // api/walkers/summary route
 app.get('/api/walkers/summary', async (req, res) => {
   try {
-    const [ratings] =
+    const [ratings] = await db.execute(`
+      SELECT 
+      `)
   }
 })
 
