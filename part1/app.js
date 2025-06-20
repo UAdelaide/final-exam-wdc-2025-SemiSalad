@@ -71,7 +71,12 @@ app.get('/api/walkrequests/open', async (req, res) => {
   }
 });
 
-// api/
+// api/walkers/summary route
+app.get('/api/walkers/summary', async (req, res) => {
+  try {
+    const []
+  }
+})
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
