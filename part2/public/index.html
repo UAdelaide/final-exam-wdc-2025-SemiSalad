@@ -123,8 +123,8 @@
                 dogPhotos.push({ dog, photoUrl: '' });
               }
             }
-          } catch {
-            
+          } catch (err) {
+            console.error('An error has occured loading ')
           }
         }
       }
