@@ -88,7 +88,7 @@
         const error = ref('');
 
         const dogs = ref([]); // array of dogs owned by the owner
-        const selectedDogId = ref('')
+        const selectedDogId = ref(''); // selected dog id from dropdown menu
 
         async function loadWalks() {
           try {
@@ -142,6 +142,8 @@
             alert('Error logging out');
           }
         }
+
+        //
 
         onMounted(() => {
           loadWalks();
