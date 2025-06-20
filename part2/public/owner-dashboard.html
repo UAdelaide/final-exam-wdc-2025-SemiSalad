@@ -128,23 +128,6 @@
           submitWalkRequest,
           logout
         };
-
-        // logout method
-        async function logout() {
-          try {
-            const res = await fetch('/api/users/logout', {
-              method: 'POST'
-            });
-            if (res.ok) {
-              window.location.href = '/index.html';
-            } else {
-              alert('Logout failed');
-            }
-          } catch (err) {
-            console.error(err);
-            alert('Error logging out');
-          }
-        }
       }
     }).mount('#app');
   </script>
