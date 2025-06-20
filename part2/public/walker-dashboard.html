@@ -57,7 +57,7 @@
         }
 
         async function applyToWalk(requestId) {
-          const user = await getCurrentUser();
+          const user = await getCurrentUser(); // calls getCurrentUser method to return the current user
           const walker_id = user.user_id;
 
           try {
