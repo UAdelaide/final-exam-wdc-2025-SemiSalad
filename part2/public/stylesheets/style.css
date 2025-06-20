@@ -174,5 +174,9 @@ section {
 }
 
 table.dogTable {
+    margin: 2em;
+}
+
+table.dogTable th, table.dogTable td {
     
 }
