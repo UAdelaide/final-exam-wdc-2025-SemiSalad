@@ -160,6 +160,13 @@ section {
     border-radius: 3px;
 }
 
+#app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
 .secondaryHeader {
 
 }
