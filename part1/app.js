@@ -23,7 +23,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
-
 let db;
 
 (async () => {
@@ -33,6 +32,7 @@ let db;
       host: 'localhost',
       user: 'root',
       password: '' // Set your MySQL root password
+      database: ''
     });
 
 
