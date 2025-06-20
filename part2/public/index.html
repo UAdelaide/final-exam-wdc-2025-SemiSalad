@@ -108,7 +108,7 @@
 
       async loadDogPics() {
         try {
-          const res = await fetch('/api/dogs');
+          const res = await fetch('/api/users/dogs');
           if (!res.ok) {
             throw new Error('Failed to fetch dogs');
           }
