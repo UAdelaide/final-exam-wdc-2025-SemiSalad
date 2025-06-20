@@ -134,6 +134,9 @@
             const res = await fetch('/api/users/logout', {
               method: 'POST'
             });
+            if (res.ok) {
+              window.location.href = ''
+            }
           }
         }
       }
