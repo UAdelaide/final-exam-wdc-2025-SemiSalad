@@ -27,6 +27,7 @@ app.use('/users', usersRouter);
 
 let db;
 
+// connect to database
 (async () => {
   try {
     db = await mysql.createConnection({
@@ -41,7 +42,7 @@ let db;
   }
 })();
 
-// 
+// api/dogs route
 app.get('/api/dogs', async (req, res) => {
   try {
     const [dogs] = await db.execute(`
