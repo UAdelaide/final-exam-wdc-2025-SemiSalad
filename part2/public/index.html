@@ -60,9 +60,11 @@
             }
             if (data.user.role === 'owner') {
               this.email = '';
-              
+              this.password = '';
               window.location.href = '/owner-dashboard.html';
             } else if (data.user.role === 'walker') {
+              this.email = '';
+              this.password = '';
               window.location.href = '/walker-dashboard.html';
             } else {
               const message = data.msg || 'Unknown role';
