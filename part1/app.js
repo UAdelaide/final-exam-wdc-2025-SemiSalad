@@ -65,7 +65,9 @@ app.get('/api/walkrequests/open', async (req, res) => {
       WHERE wr.status = 'open'
       `);
       res.json(requests);
-  } catch (err) {}
+  } catch (err) {
+    res.status(500).json({ error: 'Failed to display open walk requests' });
+  }
 })
 
 
