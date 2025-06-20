@@ -118,9 +118,9 @@
                 const photoRes = await fetch('https://dog.ceo/api/breeds/image/random');
                 const photoData = await res.json();
                 dogPhotos.push({ dog, photoUrl: photoData.message });
-                
-              } catch (err) {
-                this.error = 'Could not load dog image'
+
+              } catch {
+                dogPhotos
               }
             }
           }
