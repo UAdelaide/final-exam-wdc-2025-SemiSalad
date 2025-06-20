@@ -68,4 +68,8 @@ router.post('/logout', (req, res) => {
   });
 });
 
+
+// GET dogs
+router.get('/ownedDogs')
+
 module.exports = router;
