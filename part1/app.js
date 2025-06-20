@@ -77,10 +77,10 @@ app.get('/api/walkers/summary', async (req, res) => {
   try {
     const [ratings] = await db.execute(`
       SELECT u.username AS walker_username,
-      COUNT(r.rating_id) AS total_ratings,
-      AVG(r.rating) AS average_rating,
-      COUNT(wr.request_id) AS completed_walks
-      
+        COUNT(r.rating_id) AS total_ratings,
+        AVG(r.rating) AS average_rating,
+        COUNT(wr.request_id) AS completed_walks
+      FROM Users u 
       `)
   }
 })
