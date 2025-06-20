@@ -156,6 +156,6 @@ section {
 }
 
 .loginUser {
-    margin-left: 20px;
+    margin: 20px, 20px
     border-radius: 8px;
 }
