@@ -179,7 +179,7 @@ table.dogTable {
 
 table.dogTable th, table.dogTable td {
     padding: 1em;
-    border: none;
+    border
 }
 
 table.dogTable tbody tr:nth-child(odd) {
