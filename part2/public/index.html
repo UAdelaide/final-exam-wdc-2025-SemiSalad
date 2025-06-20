@@ -121,7 +121,7 @@
           const photoData = await photoRes.json();
           photoUrl = photoData.message;
         } catch (err) {
-                dogPhotos.push({ dog, photoUrl: '' });
+                console.error('Could not fetch photo');
               }
             }
             this.dogs = dogPhotos;
