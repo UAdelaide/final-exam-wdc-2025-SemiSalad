@@ -123,6 +123,7 @@
         } catch (err) {
                 console.error('Could not fetch photo');
               }
+              return { dog, photoUrl };
             }
             this.dogs = dogPhotos;
 
