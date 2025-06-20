@@ -85,7 +85,7 @@ router.get('/ownedDogs', async (req, res) => {
 });
 
 
-// api/dogs route from part 1
+// api/dogs route from part 1 adjusted for part 2
 router.get('/dogs', async (req, res) => {
   try {
     const [dogs] = await db.execute(`
