@@ -92,7 +92,12 @@
                     }
                 },
                 confirmAction() {
-                    if (confirm('Are you sure?'))
+                    if (confirm('Are you sure?')) {
+                        alert('Confimed!');
+                        this.newDog();
+                    } else {
+                        
+                    }
                 }
             },
             mounted() {
