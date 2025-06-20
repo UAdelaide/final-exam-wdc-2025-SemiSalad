@@ -43,7 +43,7 @@
         };
       },
       methods: {
-        async login() {
+        async login() { // method to called when logging in
           try {
             const res = await fetch('/api/users/login', {
               method: 'POST',
@@ -55,11 +55,11 @@
             });
 
             const data = await res.json();
-            if (!res.ok) {
+            if (!res.ok) { // if the login is invalid
               const message = data.msg || 'Login failed';
               alert(message);
             }
-            if (data.user.role === 'owner') {
+            if (data.user.role === 'owner') { // if the 
               this.email = '';
               this.password = '';
               window.location.href = '/owner-dashboard.html';
