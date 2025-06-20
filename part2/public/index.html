@@ -131,8 +131,10 @@
             console.error('An error has occurred loading photos');
             alert('Dog photos could not load');
           }
+        },
+        mounted() {
+          this.loadDogPics();
         }
-
     }).mount('#app');
   </script>
 
