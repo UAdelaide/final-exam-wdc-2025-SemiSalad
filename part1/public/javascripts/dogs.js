@@ -6,8 +6,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const app = createApp({
         data() {
             return {
-                dogName:
-            }
-        }
+                dogName:'A Dog',
+                dogImage: ''
+            };
+        },
+        mounted()
     })
 })
