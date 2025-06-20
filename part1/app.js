@@ -86,6 +86,7 @@ app.get('/api/walkers/summary', async (req, res) => {
       WHERE u.role = 'walker'
       GROUP BY u.user_id
       `);
+      res.json(ratings);
   } catch (err) {
     res.status(500).json({ error: 'Failed to display walker summaries' });
   }
