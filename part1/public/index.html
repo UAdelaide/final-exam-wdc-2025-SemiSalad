@@ -20,7 +20,7 @@
                 Nulla sed lectus et libero malesuada lacinia quis vitae nisi. Phasellus non purus eget tortor posuere auctor
                 faucibus at est.</p>
             <button type="button" @click="newDog">Press for another dog of the day.</button>
-            <p></p>
+            <p>{{ error }}</p>
         </div>
 
         <script>
@@ -29,7 +29,8 @@
             const app = createApp({
                 data() {
                     return {
-                        dogImage: ''
+                        dogImage: '',
+                        error: ''
                     };
                 },
                 methods: {
