@@ -125,7 +125,13 @@
               }
               return { dog, photoUrl };
             })
-      
+          );
+    this.dogs = dogPhotos;
+  } catch (err) {
+    console.error('An error has occurred loading photos');
+    alert('Dog photos could not load');
+  }
+},
     }).mount('#app');
   </script>
 
