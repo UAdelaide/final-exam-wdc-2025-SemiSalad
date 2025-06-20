@@ -153,8 +153,10 @@
             if (res.ok) {
               dogs.value = await res.json();
             } else {
-              alert('Error retrieving your dogs');
+              alert('Error retrieving dogs');
             }
+          } catch (err) {
+            
           }
         }
 
