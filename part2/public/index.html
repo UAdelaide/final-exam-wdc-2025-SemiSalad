@@ -15,7 +15,7 @@
 
     <!-- login form -->
     <div id="loginDiv">
-      <form id="loginForm">
+      <form id="loginForm" @submit.prevent="login">
         <div>
           <label>Username</label>
           <input type="email" placeholder="Username" required>
