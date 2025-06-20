@@ -184,3 +184,8 @@ table.dogTable th, table.dogTable td {
 table.dogTable tbody tr:nth-child(odd) {
     background-color: lightgrey;
 }
+
+#dogPhoto {
+    height: 90px;
+    border-radius: 10px;
+}
