@@ -91,7 +91,9 @@
                         this.error = 'Could not load dog image'
                     }
                 },
-                
+                confirmAction() {
+                    if (confirm('Are you sure?'))
+                }
             },
             mounted() {
                 this.newDog();
