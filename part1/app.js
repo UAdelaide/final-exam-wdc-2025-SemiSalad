@@ -50,7 +50,7 @@ app.get('/api/dogs', async (req, res) => {
       `);
       res.json(dogs);
   } catch (err) {
-    res.status(500).json({ error: 'Failed to fetch dogs' });
+    res.status(500).json({ error: 'Failed to retrieve dogs' });
   }
 });
 
@@ -68,7 +68,7 @@ app.get('/api/walkrequests/open', async (req, res) => {
   } catch (err) {
     res.status(500).json({ error: 'Failed to display open walk requests' });
   }
-})
+});
 
 
 // catch 404 and forward to error handler
