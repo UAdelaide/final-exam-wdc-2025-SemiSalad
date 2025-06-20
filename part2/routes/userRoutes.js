@@ -70,6 +70,8 @@ router.post('/logout', (req, res) => {
 
 
 // GET dogs
-router.get('/ownedDogs', (req, res))
+router.get('/ownedDogs', (req, res) => {
+  const owner_id = 
+})
 
 module.exports = router;
