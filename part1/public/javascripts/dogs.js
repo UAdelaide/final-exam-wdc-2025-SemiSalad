@@ -4,6 +4,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const { createApp } = Vue;
 
     const app = createApp({
-        
+        data() {
+            return {
+                dogName:
+            }
+        }
     })
 })
