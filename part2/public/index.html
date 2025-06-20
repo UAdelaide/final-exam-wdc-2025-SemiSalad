@@ -57,7 +57,10 @@
             if (!res.ok) {
               const message = data.msg || 'Login failed'
               alert(message);
-            } 
+            }
+            if (data.user.role === 'owner') {
+              
+            }
           }
         }
       }
