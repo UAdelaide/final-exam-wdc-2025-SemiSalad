@@ -181,4 +181,6 @@ table.dogTable th, table.dogTable td {
     padding: 1em;
 }
 
-table.dogTable tbody tr:nth-child
+table.dogTable tbody tr:nth-child(odd) {
+    background-color: lightgrey;
+}
