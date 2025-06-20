@@ -113,7 +113,11 @@
             const data = res.json();
 
             const dogPhotos = [];
-            for (const dog of data)
+            for (const dog of data) {
+              try {
+                const photoRes = await fetch('')
+              }
+            }
           }
         }
       }
