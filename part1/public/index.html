@@ -1,66 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Dog of the Day</title>
-        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> <!-- vue script -->
-        <link rel="stylesheet" href="stylesheets/style.css"> <!-- css file -->
-    </head>
 
-    <body>
-        <div id="app">
-            <h1 id="heading">This is the Dog of the Day</h1>
-            <img :src="dogImage" alt="" id="dogImage">
+<head>
+    <title>Dog of the Day</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> <!-- vue script -->
+    <script>
+            body {
+            padding: 50px;
+            font - size: 30px;
+            font - family: 'Times New Roman';
+        }
 
-            <button type="button" class="button">Press for </button>
-            <pre>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id metus id felis feugiat ultricies.
+        a {
+            color: #00B7FF;
+        }
+
+        #heading {
+            color: red;
+            background - color: yellow;
+        }
+
+        #app {
+            background - color: aqua;
+        }
+
+        #realbutton {
+            width: 20px;
+            height: 20px;
+            font - size: 6px;
+        }
+
+.button {
+            background - color: orange;
+            color: rgb(201, 137, 19)
+        }
+
+        #emailbutton {
+            margin - top: 200px;
+        }
+    </script>>
+</head>
+
+<body>
+    <div id="app">
+        <h1 id="heading">This is the Dog of the Day</h1>
+        <img :src="dogImage" alt="" id="dogImage">
+
+        <button type="button" class="button">Press for </button>
+        <pre>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id metus id felis feugiat ultricies.
                 Fusce augue massa, tincidunt in nisi a, dapibus laoreet diam. Cras gravida sem eu tellus volutpat,
                 feugiat finibus sapien pellentesque. Maecenas euismod, enim eget semper semper, turpis turpis eleifend sem,
                 ut blandit sem magna eget libero.</pre>
-            <p>{{ error }}</p>
-            <pre>Aenean interdum arcu et venenatis pellentesque. Pellentesque dapibus interdum
+        <p>{{ error }}</p>
+        <pre>Aenean interdum arcu et venenatis pellentesque. Pellentesque dapibus interdum
                 tincidunt. Nulla tristique dui ut arcu placerat, eget porta lacus tristique. Integer id diam justo. Ut orci arcu,
                 laoreet id blandit sed, vulputate id tortor. Phasellus nibh elit, fermentum ut ornare vitae, vulputate vel urna.
                 Nulla sed lectus et libero malesuada lacinia quis vitae nisi. Phasellus non purus eget tortor posuere auctor
                 faucibus at est.</pre>
-            <button type="button" class="button">button</button>
-            <button type="button" class="button">button</button>
-            <button type="button" @click="newDog" id="realbutton" class="button">Press for another dog of the day.</button>
-            <button type="button" class="button">button</button>
-            <button type="button" class="button">button</button>
+        <button type="button" class="button">button</button>
+        <button type="button" class="button">button</button>
+        <button type="button" @click="newDog" id="realbutton" class="button">Press for another dog of the day.</button>
+        <button type="button" class="button">button</button>
+        <button type="button" class="button">button</button>
 
-            <form>
-                <input type="email" placeholder="Email here"><br>
-                <button type="button" id="emailbutton" class="button">email</button>
-            </form>
+        <form>
+            <input type="email" placeholder="Email here"><br>
+            <button type="button" id="emailbutton" class="button">email</button>
+        </form>
 
-        </div>
+    </div>
 
-        <script>
-            const { createApp } = Vue;
+    <script>
+        const { createApp } = Vue;
 
-            const app = createApp({
-                data() {
-                    return {
-                        dogImage: '',
-                        error: ''
-                    };
-                },
-                methods: {
-                    async newDog() {
-                        try {
-                            const res = await fetch('https://dog.ceo/api/breeds/image/random');
-                            const data = await res.json();
-                            this.dogImage = data.message;
-                        } catch (err) {
-                            this.error = 'Could not load dog image'
-                        }
+        const app = createApp({
+            data() {
+                return {
+                    dogImage: '',
+                    error: ''
+                };
+            },
+            methods: {
+                async newDog() {
+                    try {
+                        const res = await fetch('https://dog.ceo/api/breeds/image/random');
+                        const data = await res.json();
+                        this.dogImage = data.message;
+                    } catch (err) {
+                        this.error = 'Could not load dog image'
                     }
-                },
-                mounted() {
-                    this.newDog();
                 }
-            }).mount('#app');
+            },
+            mounted() {
+                this.newDog();
+            }
+        }).mount('#app');
 
-        </script>
-    </body>
+    </script>
+</body>
+
 </html>
