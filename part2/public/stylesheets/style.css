@@ -172,3 +172,7 @@ section {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
+th {
+    margin-right: 10px;
+}
