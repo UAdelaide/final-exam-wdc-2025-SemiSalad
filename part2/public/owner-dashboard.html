@@ -148,8 +148,13 @@
           try {
             const res = await fetch('/api/users/ownedDogs', {
               method: 'GET',
-              credentials
-            })
+              credentials: 'include'
+            });
+            if (res.ok) {
+              dogs.value = await res.json();
+            } else {
+              
+            }
           }
         }
 
