@@ -55,7 +55,7 @@ app.get('/api/dogs', async (req, res) => {
 });
 
 
-app.get('/api/')
+app.get('/api/walkrequests/open')
 
 
 // catch 404 and forward to error handler
