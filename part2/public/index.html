@@ -13,7 +13,9 @@
     <h1 class="mb-4 text-primary">{{ message }}</h1>
 
     <div id="loginDiv">
-      <form id="loginForm"
+      <form id="loginForm" @submit.prevent="login">
+        
+      </form>
     </div>
 
     <p class="lead">Connect with trusted walkers for your beloved dog!</p>
