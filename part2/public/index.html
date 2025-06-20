@@ -54,7 +54,9 @@
             });
 
             const data = await res.json();
-            if (!res)
+            if (!res.ok) {
+              
+            }
           }
         }
       }
