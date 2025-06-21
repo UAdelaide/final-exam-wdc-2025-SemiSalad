@@ -11,7 +11,7 @@ app.use(express.static(path.join(__dirname, '/public')));
 app.use(session({ // basic session info
     secret: 'your-secret-key',
     resave: false,
-    saveUninitialized: true,
+    saveUninitialized: false,
     cookie: {
         secure: false,
         httpOnly: true,
